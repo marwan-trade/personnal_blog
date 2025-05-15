@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Blog</h1>
+    <p>This is the home page of my blog.</p>
+
+    <h2>Recent Posts</h2>
+    <div class="article-list" >
+        {% for article in articles %}
+            <div class="post" style="border: 2px solid black; margin: 10px;">
+                <h3 style="font-size: larger;">{{ article.title }}</h3>
+                <p>{{ article.content|truncatewords:30 }}</p>
+                <p><strong>Published on:</strong> {{ article.created_at }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'category_posts' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
