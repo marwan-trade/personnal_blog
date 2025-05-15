@@ -9,8 +9,8 @@
     <h2>Recent Posts</h2>
     <div class="article-list" >
         {% for article in articles %}
-            <div class="post" style="border: 2px solid black; margin: 10px;">
-                <h3 style="font-size: larger;">{{ article.title }}</h3>
+            <div class="post">
+                <h3 >{{ article.title }}</h3>
                 <p>{{ article.content|truncatewords:30 }}</p>
                 <p><strong>Published on:</strong> {{ article.created_at }}</p>
             </div>
