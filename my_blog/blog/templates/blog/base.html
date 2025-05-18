@@ -5,38 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Base{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/base.css' %}">
 </head>
 <body>
     <header class="header">
-        <h1>My Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="{% url 'blog:home' %}">Home</a></li>
+        <div class="align">
+            <div class="img-bg">
+                <img src="{% static 'img/logo.png' %}" alt="My Blog" class="logo-img">
+            </div>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-login">Sign In</a>
+                <a href="#" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+        
+        <nav class="nav">
+            <ul class="navbar">
+                <li><a href="{% url 'blog:home' %}" class="active">Home</a></li>
                 <li><a href="{% url 'blog:about' %}">About</a></li>
                 <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+                <li><a href="#">Category</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <form action="{% url 'blog:search' %}" method="get">
-                <input type="text" name="q" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <div class="social-media">
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-            <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
-        </div>
-        <div class="theme-switcher">
-            <button id="theme-toggle">Toggle Theme</button>
-            <script>
-                const themeToggle = document.getElementById('theme-toggle');
-                themeToggle.addEventListener('click', () => {
-                    document.body.classList.toggle('dark-theme');
-                });
-            </script>
-        </div>
+        
+        
+
+
     </header>
     <main>
 

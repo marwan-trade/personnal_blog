@@ -1,0 +1,145 @@
+/* Documentation Styles */
+
+:root {
+    /* 4 couleur */
+    --primary-color: #DFD0B8;
+    --secondary-color: #393E46;
+    --accent-color: #948979;
+    --background-color: #222831;
+    --text-color: #000;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+body {
+    height: 100vh;
+    background-image: url("../img/pawel-czerwinski-ROpTWGMYNkk-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Header Styles */
+
+
+header.header {
+    /*background-color: var(--primary-color);*/
+    position: relative;
+    height: 80%;
+    background-color: red;
+}
+
+div.align {
+    display: flex;
+    background-color: var(--primary-color);
+    height: 85px;
+}
+
+div.img-bg {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto 10px;
+}
+
+img.logo-img {
+    width: 50px;
+}
+
+img.logo-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+div.auth-buttons {
+    display: block;
+    margin: auto auto;
+    margin-right: 8px;
+}
+
+div.auth-buttons a {
+    margin-left: 10px;
+}
+
+div.auth-buttons a {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+div.auth-buttons a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+nav.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -70px ;
+}
+
+ul.navbar {
+    display: flex;
+    flex-wrap: wrap;    
+    width: auto;
+    align-content: flex-start;
+}
+
+ul.navbar li {
+    margin: 0 15px 15px 0;
+    width: calc(50% - 15px);
+    display: inline-block;
+    text-align: center;
+}
+
+ul.navbar li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul.navbar li a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+ul.navbar li a.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+ul.navbar li a.active:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 
+    ** Objectif : 18/05/25
+ -> Faire le slide 
+ -> Des images defilant pour les differents categories avec une petites explication
+ -> D'une maniere a ce qu'il defile avec animation 
+ -> Ajouter un bouton commencer qui ramene vers les avantages du site web ( en dessous de header )
+ -> 
+
+*/

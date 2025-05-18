@@ -9,8 +9,7 @@ def base(request):
 
 
 def home(request):
-    articles = Article.objects.filter(published=True).order_by('-created_at')
-    return render(request, 'blog/home.html', {'articles': articles})
+    return HttpResponse("This is the home page.")
 
 def about(request):
     return HttpResponse("This is the about page.")

@@ -1,0 +1,96 @@
+/* Documentation Styles */
+
+:root {
+    /* 4 couleur */
+    --primary-color: #DFD0B8;
+    --secondary-color: #393E46;
+    --accent-color: #948979;
+    --background-color: #222831;
+    --text-color: #000;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("../img/pawel-czerwinski-ROpTWGMYNkk-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header Styles */
+
+
+header.header {
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+div.lign {
+
+}
+
+div.img-bg {
+    background-color: white;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%  ;
+}
+
+img.logo-img {
+    width: 50px;
+}
+
+img.logo-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+nav.nav {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+ul.navbar {
+    display: flex;
+    flex-wrap: wrap;    
+    width: auto;
+    align-content: flex-start;
+}
+
+ul.navbar li {
+    margin: 0 15px 15px 0;
+    width: calc(50% - 15px);
+    display: inline-block;
+    text-align: center;
+}
+
+ul.navbar li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul.navbar li a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+ul.navbar li a.active {
+    background-color: var(--background-color);
+    color: #fff;
+}
+ 
+
+
+
